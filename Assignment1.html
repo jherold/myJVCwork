@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+		//Assignment 1 : Create a Restaurant Object;
+
+		var employeeRoster = [];
+
+		var Restaurant = function() {
+
+
+			return {
+				makeFood: function(myFood) {
+					console.log(this.myFood)
+				}();
+			}
+
+		}
+
+		var carlsbad = new Restaurant();
+
+		carlsbad.makeFood("pizza");
+
+	</script>
+</body>
+</html>
