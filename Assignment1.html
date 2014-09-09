@@ -9,26 +9,60 @@
 <body>
 
 
+
 <script type="text/javascript">
 
-		//Assignment 1 : Create a Restaurant Object;
+	//Assignment 1 : Create a Restaurant Object;
 
-		var employeeRoster = [];
+	var employeeRoster = [];
 
-		var Restaurant = function() {
-
-
-			return {
-				makeFood: function(myFood) {
-					console.log(this.myFood)
-				}();
-			}
-
+	//*****SUPER CLASS
+	var Restaurant = function(storeName, storeId, specialty) {
+		this.storeName = storeName;
+		this.storeId   = storeId;
+		this.specialty = specialty;
+		this.makeFood  = function() {
+			console.log("Food was made");
 		}
 
-		var carlsbad = new Restaurant();
+		/*
+			var storeId, sales;
 
-		carlsbad.makeFood("pizza");
+			function makeFood() {
+				console.log("Food was made");
+			}
+			return makeFood();
+		*/
+	}
+
+	/*
+		Restaurant.prototype.orderFood = function() {
+			return makeFood();
+		}
+	*/
+
+		var Phils = function(){};
+		Phils.prototype = new Restaurant();
+		Phils.prototype.makeFood = function() {
+			console.log("Ribs were made");
+		}
+
+		var philsbbq = new Phils();
+
+		philsbbq.makeFood();
+
+		//*****INSTANTIATING OBJECTS
+		var carlsbad  = new Restaurant("Alberto\'s", 92011, "Mexican");
+		var lajolla   = new Restaurant("Cold Stone", 92008, "Dessert");
+		var oceanside = new Restaurant("Phil\'s BBQ", 92056, "Barbecue");
+
+		carlsbad.prototype.makeFood = function() {
+			console.log("Burrito was made");
+		}
+
+		console.log(carlsbad.storeName + " " + carlsbad.storeId);
+		carlsbad.makeFood();
+		lajolla.makeFood();
 
 	</script>
 </body>
