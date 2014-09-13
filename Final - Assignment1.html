@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta caharset="UTF-8">
+	<title>Assignment 1</title>
+
+
+</head>
+<body>
+
+<p id="p1">This is my p tag</p>
+
+
+<script type="text/javascript">
+
+
+var Restaurant = function() {
+
+	//private variables
+	var storeId;
+	var sales;
+
+	//public array
+	var employeeRoster = [];
+
+	//closure called makeFood
+	function makeFood() {
+		console.log('Food was made.');
+	}
+
+	var setStoreId = function(arg1) {
+		storeId = arg1;
+		//why can't i just return the storeId from this function
+			//and avoid having to create the funtion below.
+	}
+	var getStoreId = function() {
+		return storeId;
+	}
+	var addEmployee = function(employee) {
+		employeeRoster.push(employee);
+	}
+
+	//public facing
+	return {
+		employeeRoster : employeeRoster,
+		orderFood      : makeFood,
+		setStoreId     : setStoreId,
+		getStoreId     : getStoreId,
+		addEmployee    : addEmployee
+	}
+
+};
+
+//Instantiate new objects
+var carlsbad  = new Restaurant();
+var lajolla   = new Restaurant();
+var oceanside = new Restaurant();
+
+carlsbad.setStoreId(92056);
+lajolla.setStoreId(92008);
+oceanside.setStoreId(911111);
+
+//Overwrite public method to log new message.
+	//recall that private methods cannot be overwritten.
+carlsbad.orderFood = function() {
+	console.log("Burrito was made.");
+}
+
+carlsbad.orderFood();
+lajolla.orderFood();
+oceanside.orderFood();
+
+//add joel and bob to carlsbad employee roster
+carlsbad.addEmployee("Joel");
+carlsbad.addEmployee("Bob");
+
+//add jack and jill to lajolla roster
+lajolla.addEmployee("Jack");
+lajolla.addEmployee("Jill");
+
+//add kobe and shaq to oceanside roster
+oceanside.addEmployee("Kobe");
+oceanside.addEmployee("Shaq");
+
+
+
+
+</script>
+
+
+</body>
+</html>
