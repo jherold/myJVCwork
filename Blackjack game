@@ -1,0 +1,44 @@
+Blackjack game
+
+- no interface
+- one array of cards
+
+var cardDeck = [ "spades ace", "spades 2"... "" ];
+
+var bjGame = function() {
+	var cards = cardDeck;
+
+	return {
+
+		hitMe: 
+	}
+}
+
+
+- output in console.log
+
+new bjGame(); //instantiate it
+
+bjGame.deal();
+
+VAR USERCARDS = [ "S5", "D3", "H5" ] //I'LL HAVE TO CHECK THE VALUE OF THE SECOND OPTION OF ARRAY. SO WE'LL TAKE THE 5, 3, 5.
+//LOOK INTO SWITCH STATEMENT. IF LAST VALUE IS FIVE. //MAYBE JUST REPRESENTS ACE AS 1, JACK QUEEN KING EQUAL 10. JUST CHECK THE VALUE OF THE SECOND CHARACTER OF EACH ARRAY ITEM. ONCE YOU FIND VALUE, DID YOU GO OVER OR STAY.
+
+//console.log //S5 D3
+
+bjGame.hit();
+
+//hit does a pre check. find the value of your cards
+// //WENT OVER
+// //once evaluated, move on to check.
+
+bjGame.check();
+//this is the house
+// "house s3" house wins or house loses, you win
+//check will have the most logic
+
+
+- FOCUS ON HOW YOU'RE GOING TO ORGANIZE IT
+- ONE CODE TO SHUFFLE //USING MATH.RANDOM()
+- ONE CODE TO HIT
+- 
