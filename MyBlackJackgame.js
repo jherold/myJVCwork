@@ -23,14 +23,21 @@ var bjGame = function() {
 
 	var shuffleDeck = function() {
 		//shuffle array of cards
+		var deckLength = cardDeck.length;
+		var rndmIndex = Math.Floor(Math.random() * deckLength);
+
+		return cardDeck[rndmIndex];
 	}
 
 	var dealDeck = function() {
 		//give two cards from array to player 1
+
 	}
 
 	var evaluate = function() {
 		//check cards of player 1 & 2 and see what they total
+		////maybe put this function inside deal deck above
+		//create the logic for what the card values would be
 	}
 
 	var check = function() {
@@ -46,9 +53,9 @@ var bjGame = function() {
 		////or if they reach 21, alert that they won.
 	}
 
-	var gameOver = function() {
+	//var gameOver = function() {
 		//have something check
-	}
+	//}
 
 	//OPTIONAL
 	var playerScore = function() {
@@ -57,6 +64,7 @@ var bjGame = function() {
 
 
 	return {
-		//
+		
+		shuffleDeck : shuffleDeck
 	}
 }
